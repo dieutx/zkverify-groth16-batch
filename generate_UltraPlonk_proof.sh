@@ -11,6 +11,20 @@ set -euo pipefail
 BB_VERSION="${1:-0.76.4}"          # last UltraPlonk-compatible release
 PROJECT="hello_world"
 
+# ---------------------------------------------------------------------------
+# 0️⃣  System prerequisites (C++ runtime / headers for bb)
+# ---------------------------------------------------------------------------
+echo "🔧  Installing libc++ runtime & headers…"
+sudo apt-get update -qq
+sudo apt-get install -y --no-install-recommends \
+        libc++1 libc++abi1 libc++-dev libc++abi-dev
+sudo ldconfig
+
+
+# ---------------------------------------------------------------------------
+# 1️⃣  Noir toolkit
+# ---------------------------------------------------------------------------
+
 echo "🛠  Installing Noir toolkit (noirup)…"
 curl -L https://raw.githubusercontent.com/noir-lang/noirup/refs/heads/main/install | bash
 export PATH="$HOME/.nargo/bin:$PATH"
