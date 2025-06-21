@@ -1,3 +1,30 @@
+# Noir UltraPlonk Proof Quick-Start
+
+A minimal, one-command workflow to generate an **UltraPlonk** proof and verifying key for the classic Noir `hello_world` circuit — ready for verification on [zkVerify](https://zkverify.io/).
+
+---
+
+## Prerequisites
+
+| Tool | Why you need it |
+|------|-----------------|
+| **Bash** shell | Runs the script (macOS/Linux/WSL) |
+| **curl** & **git** | Download dependencies and repo |
+| **Rust toolchain** | Required by the Noir compiler |
+| ~2 GB free disk | For build artefacts |
+
+---
+
+## 1-Step Usage
+
+```bash
+git clone https://github.com/dieutx/zkverify-groth16-batch.git
+cd zkverify-groth16-batch
+./generate_proof.sh          # bb v0.76.4 (default)
+# or
+./generate_proof.sh 0.76.0   # pick another version
+```
+
 # zkVerify Relayer Demo
 
 Minimal scripts to **generate Groth16 proofs with Circom 2.1.5** and **submit them to Horizen Labs zkVerify**.
