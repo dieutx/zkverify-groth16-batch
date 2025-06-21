@@ -18,6 +18,8 @@ noirup                                   # always fetches the latest Noir
 
 echo "🛠  Installing Barretenberg backend (bb) v${BB_VERSION}…"
 curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/master/barretenberg/bbup/install | bash
+# 👉 ADD THIS LINE: make bbup available immediately
+export PATH="$HOME/.bb:$PATH"          # ~/.bb holds the bbup binary
 bbup -v "$BB_VERSION"
 
 echo "📁  Creating fresh project ${PROJECT}/"
