@@ -20,9 +20,9 @@ A minimal, one-command workflow to generate an **UltraPlonk** proof and verifyin
 ```bash
 git clone https://github.com/dieutx/zkverify-groth16-batch.git
 cd zkverify-groth16-batch
-./generate_proof.sh          # bb v0.76.4 (default)
+./generate_UltraPlonk_proof.sh        # bb v0.76.4 (default)
 # or
-./generate_proof.sh 0.76.0   # pick another version
+./generate_UltraPlonk_proof.sh 0.76.0   # pick another version
 ```
 
 # zkVerify Relayer Demo
