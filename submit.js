@@ -27,7 +27,7 @@ export async function submit(i) {
     const { data: job } = await axios.get(
       `${API_URL}/job-status/${process.env.API_KEY}/${data.jobId}`);
     if (job.status === "Finalized") {
-      console.log(`[${i}] ✅ Finalized`);
+      console.log(`[${i}] ✅ Finalized`, job);
       break;
     }
     await new Promise(r => setTimeout(r, 5000));
