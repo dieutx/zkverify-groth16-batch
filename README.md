@@ -8,7 +8,8 @@ Minimal scripts to **generate Groth16 proofs with Circom 2.1.5** and **submit 
 
 ```bash
 # clone / enter repo
-cd to_your_working_dir
+git clone https://github.com/dieutx/zkverify-groth16-batch.git
+cd zkverify-groth16-batch
 
 # 1. install tool‑chain (Rust, Circom, SnarkJS, Node)
 bash 01_install.sh
